@@ -19,3 +19,6 @@ rad.json
 .snapshots/
 cache_*
 ~$*
+common/**
+.github/prompts/**
+.serena/**

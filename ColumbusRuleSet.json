@@ -1,0 +1,697 @@
+{
+    "name": "Columbus Global ruleset",
+    "description": "Contains Columbus Global rules that are forced during pipeline validation",
+    "rules": [
+        {
+            "id": "AA0001",
+            "action": "Hidden",
+            "justification": "Spacing around binary operators is enforced by code formatter. Hidden to avoid redundant warnings during development while formatter handles this automatically."
+        },
+        {
+            "id": "AA0002",
+            "action": "Hidden",
+            "justification": "Spacing rules are handled by automatic code formatting. Hidden to reduce noise in diagnostics while maintaining consistent formatting through tooling."
+        },
+        {
+            "id": "AA0003",
+            "action": "Hidden",
+            "justification": "NOT operator spacing is enforced by formatter. Hidden as this is a stylistic concern automatically handled by development tools."
+        },
+        {
+            "id": "AA0005",
+            "action": "Error",
+            "justification": "BEGIN..END should only enclose compound statements to maintain code readability and prevent confusion. Error level ensures developers don't add unnecessary code blocks."
+        },
+        {
+            "id": "AA0008",
+            "action": "Error",
+            "justification": "Parentheses on function calls ensure consistency and clarity even for parameterless functions. Error level enforces this standard across all code."
+        },
+        {
+            "id": "AA0013",
+            "action": "Hidden",
+            "justification": "BEGIN placement after control structures is a formatting concern handled by code formatter. Hidden to avoid duplicate warnings."
+        },
+        {
+            "id": "AA0018",
+            "action": "Hidden",
+            "justification": "Statement positioning is controlled by automatic formatting. Hidden as formatter ensures consistent code structure."
+        },
+        {
+            "id": "AA0021",
+            "action": "Info",
+            "justification": "Variable ordering by type improves readability but is not critical to functionality. Info level suggests best practice without blocking builds."
+        },
+        {
+            "id": "AA0022",
+            "action": "Info",
+            "justification": "CASE statements can improve readability over IF-THEN-ELSE but context matters. Info level allows developers to make judgment calls."
+        },
+        {
+            "id": "AA0040",
+            "action": "Error",
+            "justification": "Nested WITH statements significantly reduce code readability and make debugging difficult. Error level prevents this anti-pattern."
+        },
+        {
+            "id": "AA0050",
+            "action": "Warning",
+            "justification": "Cross-application permissions in extensions can cause dependency issues. Warning allows awareness while permitting justified exceptions."
+        },
+        {
+            "id": "AA0051",
+            "action": "Warning",
+            "justification": "Including permission sets from other applications creates tight coupling. Warning ensures developers consider implications."
+        },
+        {
+            "id": "AA0052",
+            "action": "Warning",
+            "justification": "Indirect cross-application permissions through permission sets can create hidden dependencies. Warning promotes careful review."
+        },
+        {
+            "id": "AA0053",
+            "action": "Warning",
+            "justification": "Wildcard permissions in extensions are overly permissive and pose security risks. Warning encourages explicit permission definitions."
+        },
+        {
+            "id": "AA0072",
+            "action": "Hidden",
+            "justification": "Type suffixing improves clarity but modern IDEs provide type information. Hidden as this is a style preference."
+        },
+        {
+            "id": "AA0073",
+            "action": "Error",
+            "justification": "Temp prefix for temporary variables is critical to avoid database operation mistakes. Error level prevents potential data integrity issues."
+        },
+        {
+            "id": "AA0074",
+            "action": "Error",
+            "justification": "Standard suffixes for TextConst and Label ensure translation consistency and resource management. Error level enforces naming conventions."
+        },
+        {
+            "id": "AA0087",
+            "action": "Info",
+            "justification": "Lowering permissions outside tests is usually unintended and potentially dangerous. Info level raises awareness of this practice."
+        },
+        {
+            "id": "AA0100",
+            "action": "Error",
+            "justification": "Quoted identifiers indicate naming problems and reduce code portability. Error level enforces proper naming without special characters."
+        },
+        {
+            "id": "AA0101",
+            "action": "Error",
+            "justification": "CamelCase in API pages ensures consistency with REST API conventions and integration compatibility. Error level enforces standards."
+        },
+        {
+            "id": "AA0102",
+            "action": "Error",
+            "justification": "CamelCase field names in API pages maintain JSON serialization consistency. Error level ensures API contracts are predictable."
+        },
+        {
+            "id": "AA0103",
+            "action": "Error",
+            "justification": "CamelCase in API queries aligns with OData standards and consumer expectations. Error level maintains API consistency."
+        },
+        {
+            "id": "AA0104",
+            "action": "Error",
+            "justification": "CamelCase column names in API queries ensure proper JSON/OData formatting. Error level prevents integration issues."
+        },
+        {
+            "id": "AA0105",
+            "action": "Error",
+            "justification": "PagePart controls referring to parent pages create circular dependencies and runtime errors. Error level prevents structural issues."
+        },
+        {
+            "id": "AA0106",
+            "action": "Info",
+            "justification": "Duplicate subpage references in API pages can indicate design issues but may be intentional. Info level suggests review."
+        },
+        {
+            "id": "AA0131",
+            "action": "Error",
+            "justification": "Mismatched string parameters and placeholders cause runtime errors and incorrect user messages. Error level prevents message formatting issues."
+        },
+        {
+            "id": "AA0136",
+            "action": "Warning",
+            "justification": "Unreachable code indicates logic errors or dead code paths. Warning ensures developers review and clean up code."
+        },
+        {
+            "id": "AA0137",
+            "action": "Error",
+            "justification": "Unused variables clutter code and suggest incomplete implementation. Error level enforces clean code practices."
+        },
+        {
+            "id": "AA0139",
+            "action": "Error",
+            "justification": "Assigning text to smaller targets causes data truncation and potential data loss. Error level prevents silent data corruption."
+        },
+        {
+            "id": "AA0150",
+            "action": "Info",
+            "justification": "Unnecessary by-reference parameters can confuse intent and affect performance. Info level promotes optimization without forcing changes."
+        },
+        {
+            "id": "AA0161",
+            "action": "Error",
+            "justification": "AssertError outside test codeunits indicates improper error handling. Error level enforces correct use of test-specific functions."
+        },
+        {
+            "id": "AA0175",
+            "action": "Info",
+            "justification": "Unnecessary record finds impact performance. Info level encourages optimization while allowing developer judgment."
+        },
+        {
+            "id": "AA0181",
+            "action": "Error",
+            "justification": "FindSet/Find without Next is inefficient and suggests incorrect iteration pattern. Error level prevents performance issues."
+        },
+        {
+            "id": "AA0189",
+            "action": "Info",
+            "justification": "Correct ApplicationArea values ensure proper feature availability. Info level guides developers toward standard values."
+        },
+        {
+            "id": "AA0194",
+            "action": "Error",
+            "justification": "Actions without effect create confusion and poor UX. Error level ensures all actions perform meaningful operations."
+        },
+        {
+            "id": "AA0198",
+            "action": "Error",
+            "justification": "Identical names for local and global variables cause scope confusion and maintenance issues. Error level prevents naming conflicts."
+        },
+        {
+            "id": "AA0199",
+            "action": "Info",
+            "justification": "Correct ApplicationArea ordering improves consistency but doesn't affect functionality. Info level suggests best practice."
+        },
+        {
+            "id": "AA0200",
+            "action": "Info",
+            "justification": "ApplicationArea 'All' makes other values redundant. Info level promotes clean configuration."
+        },
+        {
+            "id": "AA0201",
+            "action": "Info",
+            "justification": "ApplicationArea 'Basic' requires 'Suite' per platform conventions. Info level guides proper area specification."
+        },
+        {
+            "id": "AA0202",
+            "action": "Error",
+            "justification": "Local variables with same names as fields/methods cause confusion and potential bugs. Error level prevents scope ambiguity."
+        },
+        {
+            "id": "AA0203",
+            "action": "Error",
+            "justification": "Methods with same names as fields/actions reduce code clarity. Error level enforces unique naming."
+        },
+        {
+            "id": "AA0204",
+            "action": "Error",
+            "justification": "Global variables matching field/method/action names create maintenance problems. Error level prevents naming conflicts."
+        },
+        {
+            "id": "AA0205",
+            "action": "Info",
+            "justification": "Uninitialized variables can cause unexpected behavior. Info level encourages proper initialization without enforcing it universally."
+        },
+        {
+            "id": "AA0206",
+            "action": "Error",
+            "justification": "Unused assigned values indicate dead code or logic errors. Error level ensures efficient code."
+        },
+        {
+            "id": "AA0207",
+            "action": "Error",
+            "justification": "EventSubscriber methods must be local to function correctly. Error level prevents runtime subscription failures."
+        },
+        {
+            "id": "AA0210",
+            "action": "Info",
+            "justification": "Filtering on non-indexed fields impacts performance on large datasets. Info level raises awareness without blocking development."
+        },
+        {
+            "id": "AA0211",
+            "action": "Error",
+            "justification": "CalcFields on non-FlowField types causes runtime errors. Error level prevents execution failures."
+        },
+        {
+            "id": "AA0213",
+            "action": "Error",
+            "justification": "Obsolete objects require proper state and justification for upgrade compatibility. Error level enforces deprecation standards."
+        },
+        {
+            "id": "AA0214",
+            "action": "Error",
+            "justification": "Saving unmodified records is inefficient and may indicate logic errors. Error level promotes efficient database operations."
+        },
+        {
+            "id": "AA0215",
+            "action": "Info",
+            "justification": "Naming convention adherence improves code consistency and readability. Info level suggests best practices."
+        },
+        {
+            "id": "AA0216",
+            "action": "Info",
+            "justification": "Text constants for user messages ensure translatability. Info level encourages localization-friendly practices."
+        },
+        {
+            "id": "AA0217",
+            "action": "Error",
+            "justification": "Format strings in StrSubstNo must be constants for translation. Error level ensures localization compatibility."
+        },
+        {
+            "id": "AA0218",
+            "action": "Error",
+            "justification": "Tooltips are essential for accessibility and user experience. Error level enforces complete UI documentation."
+        },
+        {
+            "id": "AA0219",
+            "action": "Hidden",
+            "justification": "Tooltip phrasing conventions are stylistic preferences. Hidden as this is a documentation style choice."
+        },
+        {
+            "id": "AA0220",
+            "action": "Error",
+            "justification": "Empty tooltips provide no value to users. Error level ensures meaningful help text."
+        },
+        {
+            "id": "AA0221",
+            "action": "Error",
+            "justification": "OptionCaption is required for non-table field options to display correctly. Error level prevents UI issues."
+        },
+        {
+            "id": "AA0222",
+            "action": "Warning",
+            "justification": "SIFT indexes on primary/unique keys are redundant and waste resources. Warning prompts review without blocking deployment."
+        },
+        {
+            "id": "AA0223",
+            "action": "Error",
+            "justification": "Empty OptionCaption prevents proper option display. Error level ensures complete field definitions."
+        },
+        {
+            "id": "AA0224",
+            "action": "Error",
+            "justification": "Mismatched option caption count causes runtime errors. Error level prevents enumeration issues."
+        },
+        {
+            "id": "AA0225",
+            "action": "Error",
+            "justification": "Captions are required for field identification in UI. Error level enforces proper labeling."
+        },
+        {
+            "id": "AA0226",
+            "action": "Error",
+            "justification": "Empty captions create poor user experience. Error level ensures descriptive field labels."
+        },
+        {
+            "id": "AA0227",
+            "action": "Error",
+            "justification": "Optional return values in upgrade codeunits affect upgrade reliability. Error level ensures robust upgrade handling."
+        },
+        {
+            "id": "AA0228",
+            "action": "Error",
+            "justification": "Unused local methods indicate dead code or incomplete refactoring. Error level enforces code cleanup."
+        },
+        {
+            "id": "AA0230",
+            "action": "Error",
+            "justification": "Version specifications for internal assemblies create unnecessary dependencies. Error level prevents versioning issues."
+        },
+        {
+            "id": "AA0231",
+            "action": "Error",
+            "justification": "String concatenation in Error() prevents proper translation. Error level enforces localization-friendly error handling."
+        },
+        {
+            "id": "AA0232",
+            "action": "Info",
+            "justification": "Indexing FlowFields improves performance for filtered queries. Info level suggests optimization opportunities."
+        },
+        {
+            "id": "AA0233",
+            "action": "Error",
+            "justification": "Get/FindFirst/FindLast with Next indicates incorrect record iteration pattern. Error level prevents logic errors."
+        },
+        {
+            "id": "AA0234",
+            "action": "Info",
+            "justification": "Table field tooltips improve developer understanding and code documentation. Info level encourages documentation."
+        },
+        {
+            "id": "AA0235",
+            "action": "Info",
+            "justification": "OnInstallAppPerCompany should include OnCompanyInitialize for complete setup. Info level guides proper app initialization."
+        },
+        {
+            "id": "AA0237",
+            "action": "Error",
+            "justification": "Temp prefix on non-temporary variables is misleading and causes confusion. Error level enforces accurate naming."
+        },
+        {
+            "id": "AA0240",
+            "action": "Error",
+            "justification": "Email and phone numbers in source code violate privacy and security standards. Error level prevents sensitive data exposure."
+        },
+        {
+            "id": "AA0241",
+            "action": "Hidden",
+            "justification": "Keyword casing is handled by formatter. Hidden as this is a stylistic concern automatically managed."
+        },
+        {
+            "id": "AA0242",
+            "action": "Warning",
+            "justification": "Selective field loading can cause JIT load overhead. Warning encourages performance-conscious field selection."
+        },
+        {
+            "id": "AA0243",
+            "action": "Error",
+            "justification": "Manual upgrade codeunit execution bypasses platform upgrade management. Error level prevents upgrade process corruption."
+        },
+        {
+            "id": "AA0244",
+            "action": "Error",
+            "justification": "Parameters matching global variable names create scope confusion. Error level prevents naming conflicts."
+        },
+        {
+            "id": "AA0245",
+            "action": "Error",
+            "justification": "Parameters with field/method/action names reduce code clarity. Error level enforces unique naming."
+        },
+        {
+            "id": "AA0246",
+            "action": "Error",
+            "justification": "Suppressing all diagnostics hides important issues and indicates code problems. Error level prevents blanket suppression."
+        },
+        {
+            "id": "AA0247",
+            "action": "Hidden",
+            "justification": "Namespaces improve code organization and reduce naming conflicts. Info level encourages modern AL practices."
+        },
+        {
+            "id": "AA0248",
+            "action": "Hidden",
+            "justification": "This qualification is a stylistic choice for readability. Hidden to avoid cluttering diagnostics."
+        },
+        {
+            "id": "AA0249",
+            "action": "Error",
+            "justification": "Unused page field triggers due to property values indicate configuration errors. Error level prevents ineffective code."
+        },
+        {
+            "id": "AA0250",
+            "action": "Error",
+            "justification": "External business events require obsolete markers for version management. Error level ensures API lifecycle management."
+        },
+        {
+            "id": "AA0251",
+            "action": "Error",
+            "justification": "Obsolete markers on events must include attributes for proper handling. Error level enforces complete deprecation info."
+        },
+        {
+            "id": "AA0252",
+            "action": "Error",
+            "justification": "Moving external events breaks integrations and violates API stability. Error level prevents breaking changes."
+        },
+        {
+            "id": "AA0448",
+            "action": "Warning",
+            "justification": "FieldCaption and TableCaption methods respect translations and customizations. Warning promotes localization-aware code."
+        },
+        {
+            "id": "AA0462",
+            "action": "Error",
+            "justification": "CalcDate requires DateFormula variables or <> enclosed strings to function correctly. Error level prevents runtime errors."
+        },
+        {
+            "id": "AA0470",
+            "action": "Error",
+            "justification": "Placeholder comments ensure translators understand context. Error level enforces translation quality."
+        },
+        {
+            "id": "AA0471",
+            "action": "Info",
+            "justification": "AutoFormatType on decimal page fields ensures proper number formatting. Info level suggests UX improvements."
+        },
+        {
+            "id": "AA0472",
+            "action": "Info",
+            "justification": "AutoFormatExpression with amount type ensures correct currency display. Info level guides proper formatting."
+        },
+        {
+            "id": "AA0473",
+            "action": "Info",
+            "justification": "AutoFormatType on decimal table fields supports proper formatting across pages. Info level suggests data modeling best practices."
+        },
+        {
+            "id": "AA0474",
+            "action": "Info",
+            "justification": "AutoFormatExpression in table fields ensures consistent amount formatting. Info level promotes formatting standards."
+        },
+        {
+            "id": "AA0475",
+            "action": "Error",
+            "justification": "Truncate has restrictions on table types and contexts to prevent data corruption. Error level enforces safe truncation usage."
+        },
+        {
+            "id": "PTE0001",
+            "action": "Error",
+            "justification": "Object IDs must be in allocated ranges to prevent conflicts in multi-tenant environments. Error level ensures proper ID management."
+        },
+        {
+            "id": "PTE0002",
+            "action": "Error",
+            "justification": "Field IDs must be in allocated ranges to avoid conflicts with base app and other extensions. Error level enforces ID compliance."
+        },
+        {
+            "id": "PTE0003",
+            "action": "Error",
+            "justification": "CompanyOpen events in per-tenant extensions impact performance and stability. Error level prevents problematic patterns."
+        },
+        {
+            "id": "PTE0004",
+            "action": "Error",
+            "justification": "Table definitions require matching permission sets for security. Error level enforces proper permission management."
+        },
+        {
+            "id": "PTE0005",
+            "action": "Error",
+            "justification": "Compilation target must be compatible with SaaS environment. Error level ensures cloud deployment compatibility."
+        },
+        {
+            "id": "PTE0006",
+            "action": "Error",
+            "justification": "Encryption key functions are restricted in multi-tenant environments for security. Error level prevents unauthorized encryption operations."
+        },
+        {
+            "id": "PTE0007",
+            "action": "Error",
+            "justification": "Test assertion functions outside tests cause runtime errors. Error level enforces proper test isolation."
+        },
+        {
+            "id": "PTE0008",
+            "action": "Error",
+            "justification": "ApplicationArea property is required for proper feature availability management. Error level ensures UI feature control."
+        },
+        {
+            "id": "PTE0009",
+            "action": "Error",
+            "justification": "Certain app.json properties are not allowed in per-tenant extensions. Error level enforces AppSource requirements."
+        },
+        {
+            "id": "PTE0010",
+            "action": "Error",
+            "justification": "Extension name length restrictions prevent display and storage issues. Error level enforces naming limits."
+        },
+        {
+            "id": "PTE0011",
+            "action": "Error",
+            "justification": "Publisher name length restrictions ensure proper display across interfaces. Error level enforces naming limits."
+        },
+        {
+            "id": "PTE0012",
+            "action": "Error",
+            "justification": "InternalsVisibleTo is not a security feature and shouldn't be used as such. Error level prevents security misconfigurations."
+        },
+        {
+            "id": "PTE0013",
+            "action": "Error",
+            "justification": "Entitlements in extensions are not supported in per-tenant deployment. Error level prevents unsupported features."
+        },
+        {
+            "id": "PTE0014",
+            "action": "Error",
+            "justification": "XML permission sets are deprecated in favor of AL permission sets. Error level enforces modern permission management."
+        },
+        {
+            "id": "PTE0015",
+            "action": "Error",
+            "justification": "Extension name must meet platform validation requirements. Error level ensures proper extension identification."
+        },
+        {
+            "id": "PTE0016",
+            "action": "Warning",
+            "justification": "Cross-application permissions in permission set extensions create coupling issues. Warning promotes careful permission design."
+        },
+        {
+            "id": "PTE0017",
+            "action": "Warning",
+            "justification": "Including permission sets from other apps creates dependencies. Warning ensures developers consider implications."
+        },
+        {
+            "id": "PTE0018",
+            "action": "Warning",
+            "justification": "Indirect cross-app permissions through permission sets create hidden coupling. Warning promotes dependency awareness."
+        },
+        {
+            "id": "PTE0019",
+            "action": "Error",
+            "justification": "Wildcard permissions are overly permissive and pose security risks in per-tenant extensions. Error level enforces explicit permissions."
+        },
+        {
+            "id": "PTE0020",
+            "action": "Error",
+            "justification": "Using application property instead of explicit Base Application dependency improves compatibility. Error level enforces modern dependency management."
+        },
+        {
+            "id": "PTE0021",
+            "action": "Error",
+            "justification": "Reserved namespaces cannot be defined by extensions to prevent conflicts. Error level protects platform namespaces."
+        },
+        {
+            "id": "PTE0022",
+            "action": "Error",
+            "justification": "Member IDs should be in allocated ranges to prevent future conflicts. Info level guides proper ID allocation."
+        },
+        {
+            "id": "PTE0023",
+            "action": "Info",
+            "justification": "Enum ordinal values should be in allocated ranges for upgrade compatibility. Info level promotes sustainable enumeration design."
+        },
+        {
+            "id": "PTE0024",
+            "action": "Error",
+            "justification": "Moving tables or fields in per-tenant extensions breaks data migration. Error level prevents data loss scenarios."
+        },
+        {
+            "id": "PTE0025",
+            "action": "Error",
+            "justification": "Duplicate object names cause confusion and potential conflicts. Error level enforces unique naming."
+        },
+        {
+            "id": "PTE0026",
+            "action": "Hidden",
+            "justification": "AllowInCustomizations property usage is a development preference. Hidden as this is an optional best practice."
+        },
+        {
+            "id": "AW0001",
+            "action": "Error",
+            "justification": "XMLPort Request pages are not supported in web client. Error level prevents unsupported UI patterns."
+        },
+        {
+            "id": "AW0002",
+            "action": "Error",
+            "justification": "Web client cannot display both Actions and Fields in Cue Groups simultaneously. Error level prevents UI rendering issues."
+        },
+        {
+            "id": "AW0003",
+            "action": "Error",
+            "justification": "Repeater controls with Parts are not supported in web client. Error level prevents unsupported page structures."
+        },
+        {
+            "id": "AW0004",
+            "action": "Error",
+            "justification": "Blob fields cannot be displayed on page fields in web client. Error level prevents runtime UI errors."
+        },
+        {
+            "id": "AW0005",
+            "action": "Info",
+            "justification": "Actions with images improve user experience and recognition. Info level encourages UX best practices."
+        },
+        {
+            "id": "AW0006",
+            "action": "Info",
+            "justification": "UsageCategory and ApplicationArea make pages/reports searchable. Info level promotes discoverability."
+        },
+        {
+            "id": "AW0007",
+            "action": "Error",
+            "justification": "FlowFilter fields in Repeaters are not supported in web client. Error level prevents display issues."
+        },
+        {
+            "id": "AW0008",
+            "action": "Error",
+            "justification": "Repeater controls are only supported in specific page types for web client. Error level ensures proper page design."
+        },
+        {
+            "id": "AW0009",
+            "action": "Error",
+            "justification": "Blob with Bitmap subtype is deprecated in favor of Media/MediaSet. Error level enforces modern image handling."
+        },
+        {
+            "id": "AW0010",
+            "action": "Warning",
+            "justification": "Repeater positioning in List pages affects layout. Warning ensures proper page structure without blocking."
+        },
+        {
+            "id": "AW0011",
+            "action": "Info",
+            "justification": "PromotedOnly prevents action duplication in command bar. Info level suggests UX improvement."
+        },
+        {
+            "id": "AW0012",
+            "action": "Info",
+            "justification": "Teaching tip properties have context restrictions in web client. Info level raises awareness of limitations."
+        },
+        {
+            "id": "AW0013",
+            "action": "Error",
+            "justification": "Hidden groups with promoted actions cause actions to disappear. Error level prevents broken UI functionality."
+        },
+        {
+            "id": "AW0014",
+            "action": "Error",
+            "justification": "Hidden groups with ActionRef targets break action references. Error level ensures functional action structure."
+        },
+        {
+            "id": "AW0015",
+            "action": "Info",
+            "justification": "Actions with repeater scope should be promoted for visibility. Info level guides proper action placement."
+        },
+        {
+            "id": "AW0016",
+            "action": "Error",
+            "justification": "Rich Text Editor fields require isolated FastTab for proper rendering. Error level prevents layout conflicts."
+        },
+        {
+            "id": "AW0017",
+            "action": "Error",
+            "justification": "MaskType property inside repeaters is not supported in web client. Error level prevents unsupported property usage."
+        },
+		{
+            "id": "AS0084",
+            "action": "Hidden",
+            "justification": "Not required for this project - app source object range."
+        },
+		{
+            "id": "AS0051",
+            "action": "Hidden",
+            "justification": "Not required for this project - some of app.json properties."
+        },
+		{
+            "id": "AS0092",
+            "action": "Hidden",
+            "justification": "Not required for this project - application insights connection string."
+        },
+        {
+            "id": "AS0015",
+            "action": "Hidden",
+            "justification": "Not required for this project - translations in app.json."
+
+        }
+    ]
+}

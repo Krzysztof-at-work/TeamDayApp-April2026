@@ -1,0 +1,72 @@
+{
+    "folders": [
+		{
+			"path": "TeamDayApp",
+			"name": "TeamDayApp"
+		},
+		{
+			"path": "common",
+			"name": "common"	
+		},	
+		{
+			"name": "github",
+			"path": ".github"
+		},	
+		{
+			"name": "serena",
+			"path": ".serena"
+		},		
+		{
+			"path": ".alpackages",
+			"name": "packages"	
+		},
+        {
+            "path": ".AL-Go",
+			"name": "AL-GO"
+        }		
+    ],
+    "settings": {
+	"al.codeAnalyzers": [
+        "${CodeCop}",
+        "${UICop}",
+        "${PerTenantExtensionCop}",
+		"${AppSourceCop}"
+    ],	
+    "al.ruleSetPath": "..\\ColumbusRuleSet.json",
+	"al.packageCachePath": "..\\.alpackages\\standard",
+	"al.compilationOptions": {
+		"outFolder": "..\\.alpackages\\columbus",
+		"generateReportLayout": true,
+		"maxDegreeOfParallelism": 2,
+		"parallel": true
+	},
+    "al.backgroundCodeAnalysis": "Project",
+    "al.enableCodeAnalysis": true,
+    "cSpell.enabled": true,
+    "cSpell.enabledFileTypes": {
+        "al": true,
+        "markdown": true
+    },
+	"cSpell.language": "en",
+	"CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+	"CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+	"CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.RemovePrefixFromFilename": true,
+    "CRS.OnSaveAlFileAction": "Rename",
+    "CRS.ObjectNamePrefix": "COL ",
+	"alVarHelper.ignoreALPrefix": "COL",	
+    "cSpell.words": [
+        "COLCDS",
+        "CUSTPRCGRP",
+        "Dataverse",
+        "happylogo",
+        "invoiceintegration",
+        "msdyn",
+        "PRODPRICE",
+        "regionid",
+        "statecode",
+        "statuscode"
+    ],
+    "al.symbolsCountryRegion": "dk"
+	}
+}

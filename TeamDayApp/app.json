@@ -1,0 +1,32 @@
+{
+    "id": "543a4127-63d3-428a-b7f5-89495f83541d",
+    "name": "TeamDayApp-April2026",
+    "publisher": "KRPO Development Ltd.",
+    "version": "1.0.0.0",
+    "brief": "An app made for team day to try out agents in BC.",
+    "description": "The brief says it all.",
+    "privacyStatement": "https://www.columbusglobal.com/en/privacy-policy",
+    "EULA": "http://www.columbusglobal.com",
+    "help": "http://www.columbusglobal.com",
+    "url": "http://www.columbusglobal.com",
+    "logo": "logo/happylogo.png",
+    "dependencies": [],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "28.0.0.0",
+    "idRanges": [
+        {
+            "from": 71100,
+            "to": 71149
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "17.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}
