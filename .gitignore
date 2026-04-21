@@ -22,3 +22,4 @@ cache_*
 common/**
 .github/prompts/**
 .serena/**
+copilot-instructions.md

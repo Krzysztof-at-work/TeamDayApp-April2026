@@ -1,0 +1,8 @@
+// cspell.json
+{
+  "ignorePaths": [
+    "**/serena/**",
+	".gitignore",
+	"RELEASENOTES.copy.md"
+  ]
+}
